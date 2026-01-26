@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contest Tracker Pro</title>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BootsTrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div><h3>Contest Tracker Pro</h3></div>
+      <!-- Live Date & Time -->
+      <span id="span" class="d-flex align-items-center justify-content-center"
+        >Loading.....</span
+      >
+
+      <!--dark/light theme switch-->
+      <div id="dark-theme-toggler" style="text-align: right; margin: 20px">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="31"
+          fill="blue"
+          class="bi bi-circle-half"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <label class="label" for="contest">Choose a Platform : </label>
+      <select id="contest" name="contest">
+        <option value="all">All Contest</option>
+        <option value="codeforces">Codeforces</option>
+        <option value="codechef">CodeChef</option>
+        <option value="at_coder">Atcoder</option>
+        <option value="leetcode">LeetCode</option>
+        <option value="hacker_earth">HackerEarth</option>
+        <option value="hacker_rank">HackerRank</option>
+        <option value="kick_start">KickStart</option>
+      </select>
+      <button id="btn">Filter</button>
+    </div>
+
+    <div style="display: block" id="container-leetcode"></div>
+    <div style="display: block" id="container-codeforces"></div>
+    <div style="display: block" id="container-codechef"></div>
+    <div style="display: block" id="container-at_coder"></div>
+    <div style="display: block" id="container-kick_start"></div>
+    <div style="display: block" id="container-hacker_earth"></div>
+    <div style="display: block" id="container-hacker_rank"></div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <h4 class="credit">
+        Created With ❤️ by Team Innoreva
+      </h4>
+    </footer>
+    
+    <script type="module" src="index.js"></script>
+    <script type="module" src="contest.js"></script>
+    <script src="dark.js"></script>
+  </body>
+</html>
