@@ -233,3 +233,94 @@ footer {
 #dark-theme-toggler:hover {
   opacity: 0.8;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+  
+  .header h3 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+  }
+  
+  #span {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  #dark-theme-toggler {
+    margin: 10px 0 !important;
+  }
+  
+  .dropdown {
+    padding: 15px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #contest {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  #btn {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px 16px;
+  }
+  
+  .contest-card {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .contest-card h5 {
+    font-size: 1.1rem;
+  }
+  
+  .contest-img {
+    width: 120px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h3 {
+    font-size: 1.1rem;
+  }
+  
+  #span {
+    font-size: 14px;
+  }
+  
+  .contest-card {
+    margin: 8px;
+    padding: 12px;
+  }
+  
+  .contest-card h5 {
+    font-size: 1rem;
+  }
+  
+  .contest-card p {
+    font-size: 0.9rem;
+  }
+  
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Container styling */
+[id^="container-"] {
+  padding: 10px 0;
+}
+
