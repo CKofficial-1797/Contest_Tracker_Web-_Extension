@@ -172,6 +172,18 @@ fetch("https://www.kontests.net/api/v1/codeforces")
     console.error("Error fetching CodeForces contests:", error);
   });
 
+// Fetch CodeChef contests
+fetch("https://www.kontests.net/api/v1/code_chef")
+  .then((data) => {
+    return data.json();
+  })
+  .then((completedata) => {
+    cards(sortContestResp(completedata), "codechef");
+  })
+  .catch((error) => {
+    console.error("Error fetching CodeChef contests:", error);
+  });
+
 // Filter button functionality
 let platform = "all";
 const btn = document.querySelector("#btn");
