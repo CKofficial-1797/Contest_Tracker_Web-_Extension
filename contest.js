@@ -37,9 +37,43 @@ function sortContestResp(data) {
 }
 
 function cards(completedata, site) {
+  // Remove loading indicator if present
+  const container = document.querySelector("#container-" + site);
+  const loadingDiv = container.querySelector('.loading-container');
+  if (loadingDiv) {
+    loadingDiv.remove();
+  }
+  
+  // Add platform header if not exists
+  if (!container.querySelector('.platform-header')) {
+    const header = document.createElement("div");
+    header.className = "platform-header";
+    const platformNames = {
+      "leetcode": "LeetCode",
+      "codeforces": "CodeForces",
+      "codechef": "CodeChef",
+      "at_coder": "AtCoder",
+      "hacker_earth": "HackerEarth",
+      "hacker_rank": "HackerRank",
+      "kick_start": "KickStart"
+    };
+    header.textContent = platformNames[site] || site.toUpperCase();
+    container.appendChild(header);
+  }
+  
+  if (completedata.length === 0) {
+    const noContests = document.createElement("p");
+    noContests.textContent = "No upcoming contests";
+    noContests.style.textAlign = "center";
+    noContests.style.padding = "20px";
+    noContests.style.color = "#888";
+    container.appendChild(noContests);
+    return;
+  }
+  
   for (let i = 0; i < completedata.length; i++) {
     let card = document.createElement("div");
-    card.className = "contest-card";
+    card.className = "contest-card fade-in";
     
     var fragment = document.createDocumentFragment();
     
@@ -111,8 +145,6 @@ function cards(completedata, site) {
     fragment.appendChild(line);
     
     card.appendChild(fragment);
-    let container_name = "#container-" + site;
-    let container = document.querySelector(container_name);
     container.appendChild(card);
   }
 }
@@ -132,6 +164,22 @@ function toggleContenstVisibility(site) {
     }
   }
 }
+
+// Add loading indicators
+function addLoadingIndicator(site) {
+  const container = document.querySelector("#container-" + site);
+  const loadingDiv = document.createElement("div");
+  loadingDiv.className = "loading-container";
+  const spinner = document.createElement("div");
+  spinner.className = "loading-spinner";
+  loadingDiv.appendChild(spinner);
+  container.appendChild(loadingDiv);
+}
+
+// Add loading indicators for all platforms
+sites.forEach(site => {
+  addLoadingIndicator(site);
+});
 
 // Fetch LeetCode contests
 fetch("https://www.kontests.net/api/v1/leet_code")
