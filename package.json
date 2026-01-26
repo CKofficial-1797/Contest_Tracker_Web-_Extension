@@ -1,0 +1,16 @@
+{
+  "name": "contest-tracker-pro",
+  "version": "1.0.0",
+  "description": "Contest Tracker for competitive programming platforms",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["contest", "tracker", "competitive-programming"],
+  "author": "Team Innoreva",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
