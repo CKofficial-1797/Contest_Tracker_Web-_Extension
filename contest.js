@@ -196,6 +196,18 @@ fetch("https://www.kontests.net/api/v1/at_coder")
     console.error("Error fetching AtCoder contests:", error);
   });
 
+// Fetch HackerEarth contests
+fetch("https://www.kontests.net/api/v1/hacker_earth")
+  .then((data) => {
+    return data.json();
+  })
+  .then((completedata) => {
+    cards(sortContestResp(completedata), "hacker_earth");
+  })
+  .catch((error) => {
+    console.error("Error fetching HackerEarth contests:", error);
+  });
+
 // Filter button functionality
 let platform = "all";
 const btn = document.querySelector("#btn");
