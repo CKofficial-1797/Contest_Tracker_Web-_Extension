@@ -160,6 +160,18 @@ fetch("https://www.kontests.net/api/v1/leet_code")
     console.error("Error fetching LeetCode contests:", error);
   });
 
+// Fetch CodeForces contests
+fetch("https://www.kontests.net/api/v1/codeforces")
+  .then((data) => {
+    return data.json();
+  })
+  .then((completedata) => {
+    cards(sortContestResp(completedata), "codeforces");
+  })
+  .catch((error) => {
+    console.error("Error fetching CodeForces contests:", error);
+  });
+
 // Filter button functionality
 let platform = "all";
 const btn = document.querySelector("#btn");
