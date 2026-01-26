@@ -220,6 +220,18 @@ fetch("https://kontests.net/api/v1/hacker_rank")
     console.error("Error fetching HackerRank contests:", error);
   });
 
+// Fetch KickStart contests
+fetch("https://www.kontests.net/api/v1/kick_start")
+  .then((data) => {
+    return data.json();
+  })
+  .then((completedata) => {
+    cards(sortContestResp(completedata), "kick_start");
+  })
+  .catch((error) => {
+    console.error("Error fetching KickStart contests:", error);
+  });
+
 // Filter button functionality
 let platform = "all";
 const btn = document.querySelector("#btn");
