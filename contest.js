@@ -208,6 +208,18 @@ fetch("https://www.kontests.net/api/v1/hacker_earth")
     console.error("Error fetching HackerEarth contests:", error);
   });
 
+// Fetch HackerRank contests
+fetch("https://kontests.net/api/v1/hacker_rank")
+  .then((data) => {
+    return data.json();
+  })
+  .then((completedata) => {
+    cards(sortContestResp(completedata), "hacker_rank");
+  })
+  .catch((error) => {
+    console.error("Error fetching HackerRank contests:", error);
+  });
+
 // Filter button functionality
 let platform = "all";
 const btn = document.querySelector("#btn");
