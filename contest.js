@@ -184,6 +184,18 @@ fetch("https://www.kontests.net/api/v1/code_chef")
     console.error("Error fetching CodeChef contests:", error);
   });
 
+// Fetch AtCoder contests
+fetch("https://www.kontests.net/api/v1/at_coder")
+  .then((data) => {
+    return data.json();
+  })
+  .then((completedata) => {
+    cards(sortContestResp(completedata), "at_coder");
+  })
+  .catch((error) => {
+    console.error("Error fetching AtCoder contests:", error);
+  });
+
 // Filter button functionality
 let platform = "all";
 const btn = document.querySelector("#btn");
