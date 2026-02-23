@@ -64,20 +64,20 @@ HackerEarth - HackerRank - Kick Start
 
 ------------------------------------------------------------------------
 
-## Project Structure
-
-Contest_Tracker/ ├── index.html ├── index.css ├── index.js ├──
-contest.js ├── dark.js ├── manifest.json ├── package.json ├── images/
-└── node_modules/
-
 ------------------------------------------------------------------------
 
 ## API
 
 Base URL: https://www.kontests.net/api/v1/
 
-Endpoints: - /leet_code - /codeforces - /code_chef - /at_coder -
-/hacker_earth - /hacker_rank - /kick_start
+Endpoints:
+- /leet_code 
+- /codeforces
+- /code_chef
+- /at_coder
+- /hacker_earth
+- /hacker_rank
+- /kick_start
 
 ------------------------------------------------------------------------
 
@@ -97,6 +97,4 @@ Endpoints: - /leet_code - /codeforces - /code_chef - /at_coder -
 
 ------------------------------------------------------------------------
 
-## License
 
-MIT License
