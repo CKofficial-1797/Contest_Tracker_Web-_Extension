@@ -1,136 +1,102 @@
-﻿# Contest Tracker Pro
+# Track the Contests
 
-A comprehensive browser extension for tracking competitive programming contests across multiple platforms in real-time.
+A lightweight browser extension that aggregates and displays competitive
+programming contests from multiple platforms in real time.
+
+------------------------------------------------------------------------
 
 ## Overview
 
-Contest Tracker Pro is a browser extension designed to help competitive programmers stay updated with upcoming contests from major coding platforms. The extension aggregates contest information from LeetCode, CodeForces, CodeChef, AtCoder, HackerEarth, HackerRank, and KickStart, presenting them in a clean, user-friendly interface.
+Contest Tracker Pro helps programmers stay updated with upcoming and
+ongoing contests by collecting data from major platforms and presenting
+it in a clean popup interface. All contest information is fetched
+dynamically and organized for quick access.
+
+Supported platforms: - LeetCode - Codeforces - CodeChef - AtCoder -
+HackerEarth - HackerRank - Kick Start
+
+------------------------------------------------------------------------
 
 ## Features
 
 ### Core Functionality
-- **Multi-Platform Support**: Track contests from 7 major competitive programming platforms
-- **Real-Time Updates**: Live contest data fetched from Kontests API
-- **Smart Filtering**: Filter contests by specific platforms or view all at once
-- **Live Clock**: Real-time date and time display using Moment.js
-- **Dark Mode**: Toggle between light and dark themes with persistent preferences
 
-### User Experience
-- **Responsive Design**: Optimized for all screen sizes and devices
-- **Loading Indicators**: Smooth loading animations while fetching data
-- **Card-Based Layout**: Clean, organized presentation of contest information
-- **Platform Headers**: Clear categorization of contests by platform
-- **Hover Effects**: Interactive card animations for better user engagement
+-   Multi-platform contest tracking
+-   Real-time updates via Kontests API
+-   Platform-based filtering
+-   Live local clock
+-   Dark mode with saved preference
 
-### Contest Information Displayed
-- Contest name and platform
-- Start and end times (formatted in local timezone)
-- Contest duration
-- Time remaining until contest starts
-- Direct links to contest pages
+### Contest Details Displayed
 
-## Technology Stack
+-   Contest name
+-   Platform name
+-   Start and end time (local timezone)
+-   Duration
+-   Time remaining
+-   Direct contest link
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Libraries**: Moment.js for date/time handling
-- **API**: Kontests API for contest data
-- **Manifest**: Version 3 (latest Chrome Extension standard)
+------------------------------------------------------------------------
+
+## Tech Stack
+
+-   HTML5
+-   CSS3
+-   JavaScript (ES6+)
+-   Moment.js
+-   Chrome Extension Manifest V3
+-   Kontests API
+
+------------------------------------------------------------------------
 
 ## Installation
 
-### From Source
-1. Clone this repository
-2. Install dependencies: `npm install`
-3. Open your browser's extension management page
-   - Chrome: `chrome://extensions/`
-   - Edge: `edge://extensions/`
-4. Enable "Developer mode"
-5. Click "Load unpacked" and select the project directory
+### Load from Source
 
-### Requirements
-- Node.js and npm (for dependency management)
-- Modern browser supporting Manifest V3 (Chrome 88+, Edge 88+)
+1.  Clone the repository
+2.  Run: npm install
+3.  Open your browser:
+    -   Chrome: chrome://extensions/
+    -   Edge: edge://extensions/
+4.  Enable Developer Mode
+5.  Click Load unpacked
+6.  Select the project folder
+
+------------------------------------------------------------------------
 
 ## Project Structure
 
-```
-Contest_Tracker/
-├── index.html          # Main popup interface
-├── index.css           # Styling and responsive design
-├── index.js            # Live clock functionality
-├── contest.js          # Contest fetching and rendering logic
-├── dark.js             # Dark mode toggle implementation
-├── manifest.json       # Extension configuration
-├── package.json        # Project dependencies
-├── images/             # Platform logos and icons
-└── node_modules/       # Dependencies (Moment.js)
-```
+Contest_Tracker/ ├── index.html ├── index.css ├── index.js ├──
+contest.js ├── dark.js ├── manifest.json ├── package.json ├── images/
+└── node_modules/
 
-## API Integration
+------------------------------------------------------------------------
 
-The extension uses the Kontests API to fetch contest data:
-- Base URL: `https://www.kontests.net/api/v1/`
-- Endpoints: `/leet_code`, `/codeforces`, `/code_chef`, `/at_coder`, `/hacker_earth`, `/hacker_rank`, `/kick_start`
+## API
 
-## Development
+Base URL: https://www.kontests.net/api/v1/
 
-### Local Development
-```bash
-# Install dependencies
-npm install
+Endpoints: - /leet_code - /codeforces - /code_chef - /at_coder -
+/hacker_earth - /hacker_rank - /kick_start
 
-# The extension can be loaded directly into your browser
-# No build step required for development
-```
-
-### Key Components
-
-**index.js**: Implements the real-time clock using Moment.js, updating every second to display current date and time.
-
-**contest.js**: Handles API calls to fetch contest data, sorts contests by start time, creates dynamic card elements, and manages platform filtering.
-
-**dark.js**: Manages dark mode state using localStorage, allowing theme preference to persist across sessions.
-
-## Browser Compatibility
-
-- Google Chrome (version 88+)
-- Microsoft Edge (version 88+)
-- Opera (version 74+)
-- Brave Browser (version 1.20+)
+------------------------------------------------------------------------
 
 ## Permissions
 
-The extension requires the following permissions:
-- **storage**: To save user preferences (dark mode setting)
-- **host_permissions**: Access to Kontests API endpoints
+-   storage -- Save theme preference
+-   host_permissions -- Access contest API
 
-## Contributing
+------------------------------------------------------------------------
 
-Contributions are welcome. Please follow these guidelines:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes with meaningful commits
-4. Test thoroughly across different platforms
-5. Submit a pull request with a clear description
+## Browser Support
+
+-   Chrome 88+
+-   Edge 88+
+-   Opera 74+
+-   Brave 1.20+
+
+------------------------------------------------------------------------
 
 ## License
 
-MIT License - feel free to use this project for learning and development purposes.
-
-
-
-## Acknowledgments
-
-- Contest data provided by Kontests API
-- Platform logos belong to their respective owners
-- Base project structure inspired by ClockSet-v1
-
-## Version History
-
-**v1.0.0** - Initial Release
-- Multi-platform contest tracking
-- Dark mode support
-- Responsive design
-- Real-time updates
-- Filter functionality
-
+MIT License
