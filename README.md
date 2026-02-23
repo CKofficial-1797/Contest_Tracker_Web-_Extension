@@ -68,8 +68,6 @@ HackerEarth - HackerRank - Kick Start
 
 ## API
 
-Base URL: https://www.kontests.net/api/v1/
-
 Endpoints:
 - /leet_code 
 - /codeforces
@@ -96,5 +94,6 @@ Endpoints:
 -   Brave 1.20+
 
 ------------------------------------------------------------------------
+
 
 
